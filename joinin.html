@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>Joining</h1>
+	
+	<form method="POST" action="/Joinings">
+		{% from "includes/_formhelpers.html" import render_field %}
+		{{ form.csrf_token }}	
+		<div class="form-group">
+		{{render_field(form.name,class_="form-control")}}
+		
+		</div>
+		<div class="form-group">
+		{{render_field(form.Course, class_="form-control")}}
+
+
+		</div>
+		<div class="form-group">
+		{{render_field(form.completion_date,placeholder="yy-mm-dd", class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.joiningdate,placeholder="yy-mm-dd", class_="form-control")}}
+		</div>
+		
+		<div class="form-group">
+		{{render_field(form.coursefee, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.instructor, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.adhaarnum, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.mobile, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.email, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.remark, class_="form-control")}}
+		</div>
+
+
+		
+		<p><input type="submit" class="btn btn_primary" value="Submit"></p>
+		
+		
+	</form>
+
+{% endblock %}	

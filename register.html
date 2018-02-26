@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>Registration Form</h1>
+	
+	<form method="POST" action="register">
+	
+		
+       
+		{% from "includes/_formhelpers.html" import render_field %}
+		{{ form.csrf_token }}	
+		<div class="form-group">
+		
+		{{render_field(form.name, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.mobile, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.email, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.Course, class_="form-control")}}
+		</select>
+
+
+		</div>
+		<div class="form-group">
+		{{render_field(form.source, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.leadstatus, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		<!-- <label for=" dm_coulg_cb"> dm_coulg_cb</label>
+		<input type="date" class="form-control" name="dm_coulg_cb" /><br> -->
+		{{render_field(form. dm_coulg_cb, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.counselor, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.remark, class_="form-control")}}
+		</div>
+		
+		<p><input type="submit" class="btn btn_primary" value="Register"></p>
+		
+		
+	</form>
+
+{% endblock %}	

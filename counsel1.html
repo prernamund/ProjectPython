@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+ 
+ {% block body %}
+ <div class="container-fluid">
+   
+   <div class="row">
+     <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+   
+    <center><h1>Counselling</h1></center></div>
+    <style>
+ table, th, td {
+     border: 2px solid black;
+     border-collapse: collapse;
+     width:10px;
+ }
+ </style>
+ <form method="GET", action="/counsel1" >
+
+ <center><table style="width:10px">
+  <thead>
+   <tr>
+    <th><center>Id</center></th>
+     <!-- <th><center>Name</center></th> -->
+     <th><center>Mobile</center></th>
+     <th><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></th>
+    <th><center>Course</center></th>
+    <th><center>Source</center></th>
+    <th><center>LeadStatus</center></th>
+    <th><center>&nbsp;&nbsp;&nbsp;Demodate&nbsp;&nbsp;&nbsp;</center></th>
+     <th><center>Counsellor</center></th>
+    <th><center>Remark</center></th>
+    <th><center>Join</center></th>
+    <th><center>Willing</center></th>
+    <th><center>Dead</center></th>
+   </thead>   
+   </tr>  
+   {% for row in rv %}
+   <tr>
+     <td><center>{{row.0}}</center></td>
+    <!-- <td><center>{{row.1}}</center></td> -->
+     <td><center>{{row.2}}</center></td>  
+     <td><center>{{row.3}}</center></td>
+    <td><center>{{row.4}}</center></td>
+    <td><center>{{row.5}}</center></td>
+    <td><center>{{row.6}}</center></td>
+     <td><center>{{row.7}}</center></td>
+     <td><center>{{row.8}}</center></td>
+     <td><center>{{row.9}}</center></td>
+     <td><center><button class="JOIN" style="background-color:green; color: black">JOIN</button></center></td>
+     <td><center><button class="WILLING" style="background-color:orange; color: black">WILLING</button></center></td>
+
+     <td><center><button class="DEAD" style="background-color:red; color: black">DEAD</button></center></td>
+
+
+
+
+
+ 
+  
+   </tr>
+
+   {% endfor %}
+   
+ </table></center>
+ <br><br>
+  </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+
+ </div>
+
+</form>
+ 
+ 
+ {% endblock %} 

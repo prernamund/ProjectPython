@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>Counselling</h1>
+	
+	<form method="POST" action="counselling">
+		{% from "includes/_formhelpers.html" import render_field %}
+		{{ form.csrf_token }}	
+		<div class="form-group">
+		{{render_field(form.todaydate,placeholder="yy-mm-dd",class_="form-control")}}
+		</div>
+		<div class="form-group">
+		{{render_field(form.Course, class_="form-control")}}
+		</div>
+		
+		<p><input type="submit" class="btn btn_primary" value="Submit"></p>
+		
+		
+	</form>
+
+{% endblock %}	
